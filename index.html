@@ -242,17 +242,38 @@
 
     <div class="section">
         <h2>4. Características eléctricas de un transformador</h2>
-        <ul>
-            <li><strong>Tensión del primario (V1):</strong> Tensión de alimentación del devanado primario.</li>
-            <li><strong>Tensión del secundario (V2):</strong> Tensión obtenida en los bornes del secundario.</li>
-            <li><strong>Caída de tensión:</strong> Diferencia de tensión en el secundario bajo carga máxima.</li>
-            <li><strong>Corriente del primario (I1):</strong> Corriente en amperios en el primario.</li>
-            <li><strong>Corriente del secundario (I2):</strong> Corriente en amperios en el secundario, determinada por la potencia del transformador.</li>
-            <li><strong>Frecuencia (F):</strong> Frecuencia de la red de alimentación en hercios.</li>
-            <li><strong>Potencia aparente (S):</strong> Producto de la tensión del secundario por la corriente máxima del devanado: <strong>S = V2 · I2</strong>.</li>
-            <li><strong>Densidad de corriente (J):</strong> Unidad de corriente por superficie, medida en A/mm². Valores empíricos para diferentes potencias.</li>
-            <li><strong>Rendimiento (η):</strong> Alta eficiencia (>90%), afectada por pérdidas en hierro (PFe) y cobre (PCu). Calculado como <strong>η = (P2 / P1) · 100 = (P2 / (P2 + PFe + PCu)) · 100</strong>.</li>
-        </ul>
+        <p>
+            El documento describe varias características importantes que se deben considerar para el cálculo de transformadores:
+            <ul>
+                <li><strong>Tensión del primario (V₁)</strong>: Voltaje en el devanado primario.</li>
+                <li><strong>Tensión del secundario (V₂)</strong>: Voltaje en el devanado secundario.</li>
+                <li><strong>Caída de tensión</strong>: Diferencia de voltaje en el devanado secundario bajo carga máxima.</li>
+                <li><strong>Corriente del primario (I₁)</strong>: Corriente en el devanado primario.</li>
+                <li><strong>Corriente del secundario (I₂)</strong>: Corriente en el devanado secundario.</li>
+                <li><strong>Frecuencia (F)</strong>: Frecuencia de la red de alimentación (en Hz).</li>
+                <li><strong>Potencia aparente (S)</strong>: Potencia en VA (voltioamperios), calculada como \( S = V_2 \cdot I_2 \).</li>
+            </ul>
+            También menciona la <strong>densidad de corriente (J)</strong>, que es la corriente por unidad de superficie en A/mm², determinada empíricamente. 
+            Además, se recuerdan tres tipos de potencias en corriente alterna:
+            <ul>
+                <li><strong>Potencia aparente (S)</strong>: \( S = V \cdot I \) (VA).</li>
+                <li><strong>Potencia activa (P)</strong>: \( P = V \cdot I \cdot \cos \phi \) (W).</li>
+                <li><strong>Potencia reactiva (Q)</strong>: \( Q = V \cdot I \cdot \sin \phi \) (VAr).</li>
+            </ul>
+            Finalmente, en el "caso práctico inicial" se menciona que algunos datos para el cálculo de transformadores se toman de forma empírica, basados en la densidad de corriente o el rendimiento.
+        </p>
+        <p><strong>Rendimiento</strong></p>
+        <p>
+            El texto explica el rendimiento de un transformador, que es una máquina con alto rendimiento (superior al 90%). Sin embargo, se producen pérdidas en el hierro (<em>P<sub>Fe</sub></em>) y en el cobre (<em>P<sub>Cu</sub></em>), lo que hace que la potencia del transformador conectado a plena carga no corresponda con la calculada previamente. En transformadores de pequeña potencia, el dato del rendimiento puede obviarse, pero no en transformadores de mayor potencia. El rendimiento se expresa en porcentaje y se calcula como el cociente entre la potencia activa del devanado secundario (<em>P<sub>2</sub></em>) y la potencia activa del primario (<em>P<sub>1</sub></em>), multiplicado por 100. La fórmula aproximada del rendimiento es:
+        </p>
+        <p>
+            <em>η = (P<sub>2</sub> / P<sub>1</sub>) &times; 100 = (P<sub>2</sub> / (P<sub>2</sub> + P<sub>Fe</sub> + P<sub>Cu</sub>)) &times; 100</em>
+        </p>
+        <p>
+            Para agilizar el cálculo sin conocer las pérdidas en el hierro y en el cobre, se utilizan valores de rendimiento de una tabla, establecidos en función de la potencia aparente del transformador.
+        </p>
     </div>
+    
+    
 </body>
 </html>
