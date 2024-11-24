@@ -3,277 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Transformadores</title>
+    <title>DomotiLife</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f9;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
+            padding-bottom: 50px; /* Añade más espacio en el fondo */
         }
-        h1, h2, h3 {
-            color: #003366;
+        header {
+            background-color: #0074D9;
+            color: white;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        h1 {
-            border-bottom: 2px solid #003366;
+        header img {
+            height: 80px; /* Tamaño del logo */
+            margin-right: 20px;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 25px; /* Botones redondeados */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra en botones */
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #005bb5;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #0074D9;
             padding-bottom: 10px;
-        }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-        p {
-            text-align: justify;
-            margin: 10px 0;
+            margin-bottom: 20px;
         }
         .section {
-            margin-bottom: 40px;
+            display: none;
         }
-        .center {
-            text-align: center;
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .big-button {
-            font-size: 20px;
-            padding: 10px 20px;
+        footer {
+            background-color: #0074D9;
             color: white;
-            background-color: #ff6347;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        .big-button:hover {
-            background-color: #ff4500;
+        .contact-item input,
+        .contact-item textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-item button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .contact-item button:hover {
+            background-color: #005bb5;
+        }
+        .image {
+            max-width: 100%;
+            height: auto; /* Ajusta la altura automáticamente */
+            max-height: 300px; /* Limita la altura máxima */
+            margin: 10px 0;
+        }
+        @media (min-width: 767px) {
+            .about-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .about-item p {
+                flex: 1;
+                margin-right: 20px;
+            }
+            .about-item img {
+                flex: 1;
+                max-width: 50%;
+            }
+        }
+        @media (max-width: 767px) {
+            .about-item img {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Resumen de Transformadores</h1>
-
-    <div class="center">
-        <button class="big-button" onclick="window.location.href='https://www.youtube.com/watch?v=hPr-Yc92qaY';">Púlsame para mejorar el resumen</button>
+    <header>
+        <img src="logo.png" alt="Logo de DomotiLife">
+        <h1>DomotiLife</h1>
+    </header>
+    <nav class="nav-buttons">
+        <button onclick="showSection('services')">Servicios</button>
+        <button onclick="showSection('about')">Sobre Nosotros</button>
+        <button onclick="showSection('contact')">Contacto</button>
+    </nav>
+    <div class="container">
+        <section id="services" class="section">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="service-item">
+                <h3>Instalaciones Eléctricas y Domóticas Adaptadas</h3>
+                <p>Realizamos instalaciones eléctricas y de domótica de alta calidad. Nos especializamos en adaptaciones para personas con movilidad reducida, garantizando seguridad, comodidad y accesibilidad en sus hogares.</p>
+                <img src="instalaciones.jpg" alt="Instalaciones Eléctricas" class="image">
+            </div>
+            <div class="service-item">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Proporcionamos servicios de mantenimiento preventivo para asegurar el correcto funcionamiento y la durabilidad de los sistemas eléctricos y domóticos. Nuestro equipo se encarga de detectar y solucionar problemas antes de que se conviertan en fallos graves.</p>
+                <img src="mantenimiento.jpg" alt="Mantenimiento Preventivo" class="image">
+            </div>
+            <div class="service-item">
+                <h3>Auditorías Energéticas</h3>
+                <p>Ofrecemos auditorías energéticas completas para identificar oportunidades de ahorro y mejorar la eficiencia energética de sus instalaciones. Nuestro objetivo es reducir el consumo de energía y los costos asociados.</p>
+                <img src="auditoria.jpg" alt="Auditorías Energéticas" class="image">
+            </div>
+        </section>
+        <section id="about" class="section">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-item">
+                <p>En DomotiLife, nos dedicamos a ofrecer soluciones tecnológicas avanzadas para mejorar la calidad de vida de nuestros clientes. Nos especializamos en la instalación y adaptación de sistemas eléctricos y domóticos, con un enfoque particular en la accesibilidad para personas con movilidad reducida.</p>
+                <img src="equipo.jpg" alt="Nuestro Equipo" class="image">
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2 class="section-title">Contacto</h2>
+            <form id="contactForm" class="contact-item">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Correo electrónico: <a href="mailto:domotilife@gmail.com">domotilife@gmail.com</a></p>
+        </section>
     </div>
+    <footer>
+        <p>&copy; 2024 DomotiLife. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
 
-    <div class="section">
-        <h2>1. Conceptos iniciales</h2>
-        <p>
-            Un transformador es una máquina eléctrica estática que funciona por el efecto de la inducción magnética. Está formado por un devanado primario, al que se le aplica una fuerza electromotriz E1 capaz de hacer circular la corriente inductora, y por un devanado secundario, en el que se induce de forma estática una segunda fuerza electromotriz E2.
-        </p>
-        <p>
-            Si los devanados primario y secundario son iguales en número de espiras N y diámetro del conductor, la fuerza electromotriz del primario es idéntica a la del secundario. Si el devanado secundario dispone de un número de espiras diferente al del primario, la fuerza electromotriz en sus bornes es proporcional a la relación entre dicho número de espiras.
-        </p>
-    </div>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
 
-    <div class="section">
-        <h2>1.1. Relación de transformación</h2>
-        <p>
-            La relación entre las espiras del primario N1 y las del secundario N2 se denomina relación de transformación, se representa por m y se puede calcular mediante la expresión:
-        </p>
-        <p>
-            <strong>m = N1 / N2</strong>
-        </p>
-        <p>
-            En un transformador real se presentan una serie de pérdidas que deben tenerse en cuenta. Estas pérdidas se deben a los siguientes factores:
-        </p>
-        <ul>
-            <li><strong>Reluctancia del circuito magnético:</strong> Cuanto mayor es su valor, mayores pérdidas se producirán. La elección adecuada del material del núcleo disminuirá dicho efecto.</li>
-            <li><strong>Resistencia de los devanados:</strong> Es la resistencia que el conductor presenta al paso de la corriente.</li>
-            <li><strong>Pérdidas en el hierro por corriente de Foucault:</strong> Las corrientes de Foucault producen pérdidas por exceso de calor. Se recomienda el uso de finas chapas magnéticas para disminuir estas pérdidas.</li>
-            <li><strong>Histéresis magnética:</strong> La selección de materiales magnéticamente blandos permite que el ciclo de histéresis sea lo más estrecho posible, reduciendo las pérdidas.</li>
-            <li><strong>Dispersión del flujo magnético:</strong> El flujo de dispersión influye negativamente en el rendimiento y en la relación de transformación. Se reduce utilizando determinadas configuraciones del núcleo, como el tipo acorazado.</li>
-        </ul>
-        <p>
-            A pesar de las pérdidas, el valor de la relación de transformación puede ser utilizado según la expresión anterior, ya que es muy aproximado.
-        </p>
-    </div>
+            console.log(`Nombre: ${name}, Correo: ${email}, Mensaje: ${message}`);
+            alert("Formulario enviado!");
+            var mailtoLink = `mailto:domotilife@gmail.com?subject=Contacto de ${name}&body=Nombre: ${name}%0ACorreo Electrónico: ${email}%0AMensaje: ${message}`;
+            window.location.href = mailtoLink;
+        });
 
-    <div class="section">
-        <h2>1.2. Terminales homólogos</h2>
-        <p>
-            Los terminales homólogos son los bornes de ambos devanados en los que el sentido de la corriente es el mismo para un instante determinado de la corriente.
-        </p>
-        <p>
-            La asignación de terminales homólogos se establece al arrollar los devanados sobre el núcleo. Si se arrollan en el mismo sentido, los terminales superiores e inferiores entre sí son homólogos. Si el sentido del arrollamiento es contrario, el terminal superior de uno es homólogo con el inferior del otro.
-        </p>
-        <p>
-            La identificación de terminales homólogos es importante, especialmente en transformadores con varios grupos de bobinas que se conectan para conseguir diferentes valores de tensión.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>2. Clasificación de los transformadores</h2>
-        <p>
-            Los transformadores se utilizan tanto en dispositivos domésticos como industriales y en sistemas de tratamiento y distribución de energía eléctrica.
-        </p>
-        <p>
-            Se pueden clasificar según el nivel de tensión, el número de fases de alimentación y el modo de construcción.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>2.1. Por el nivel de tensión</h2>
-        <p>
-            Los transformadores son reversibles: si se aplica una tensión alterna a cualquiera de sus devanados, se obtiene en el devanado contrario otra tensión proporcional según la relación de transformación.
-        </p>
-        <ul>
-            <li><strong>Reductores:</strong> Transforman la tensión del primario en una tensión menor en el secundario. Se usan en electrodomésticos para reducir la tensión de 230V a niveles necesarios (5V, 12V, 24V).</li>
-            <li><strong>Elevadores:</strong> Aumentan la tensión del secundario respecto al primario. Se usan en líneas de distribución para facilitar el transporte de energía, ya que a mayor tensión, menor es la sección de los conductores.</li>
-        </ul>
-        <p>
-            La relación de transformación también se puede calcular en función de la tensión aplicada al primario V1 respecto a la del secundario V2, o de la relación entre las corrientes que circulan por ambos devanados.
-        </p>
-        <p>
-            <strong>m = V1 / V2 = I2 / I1</strong>
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>2.2. Por el número de fases de alimentación</h2>
-        <p>
-            Los transformadores pueden ser principalmente monofásicos y trifásicos según el número de fases del sistema de alimentación.
-        </p>
-
-        <h3>Monofásicos</h3>
-        <p>
-            Tienen un devanado primario y uno secundario. El primario es alimentado por un sistema de corriente monofásico, generando en el secundario una tensión proporcional a la relación de transformación.
-        </p>
-        <p>
-            Algunos devanados pueden tener un sistema multitoma que permite trabajar con diferentes valores de tensión.
-        </p>
-
-        <h3>Trifásicos</h3>
-        <p>
-            Compuestos por tres grupos de bobinas por cada devanado, conectados en estrella, triángulo o zig-zag. Se alimentan con un sistema trifásico de corriente alterna, produciendo en el secundario una tensión proporcional.
-        </p>
-        <p>
-            Requieren tres bobinas para cada fase en el devanado primario y secundario. Las diferentes posibilidades de conexión y sus relaciones de transformación se estudian más adelante.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>2.3. Por su construcción</h2>
-        <p>
-            Los transformadores, tanto monofásicos como trifásicos, presentan diferentes configuraciones basadas en el tipo de núcleo y la disposición de los devanados.
-        </p>
-
-        <h3>Transformadores monofásicos de columnas</h3>
-        <p>
-            Devanados montados en diferentes columnas del núcleo. No son comunes en transformadores comerciales debido a su mayor ocupación de espacio.
-        </p>
-
-        <h3>Transformadores monofásicos acorazados</h3>
-        <p>
-            Utilizan un núcleo cerrado de tres columnas, siendo la central el doble de ancha que las laterales. Ambos devanados están en la columna central.
-        </p>
-
-        <h3>Transformadores trifásicos de tres columnas</h3>
-        <p>
-            Núcleo con tres columnas de igual tamaño. Cada columna contiene las bobinas del primario y secundario de una fase, interconectadas externamente.
-        </p>
-
-        <h3>Transformadores trifásicos de cinco columnas</h3>
-        <p>
-            Núcleo con cinco columnas, donde las centrales alojan los devanados y las de los extremos están vacías. Se consigue una menor sección en la culata y una reducción del campo de dispersión.
-        </p>
-
-        <h3>Transformadores trifásicos acorazados</h3>
-        <p>
-            Similar a tres transformadores monofásicos acorazados unidos en un núcleo común. Utilizados en transformadores de muy alta potencia para centrales y centros de transformación.
-        </p>
-
-        <h3>Transformador toroidal</h3>
-        <p>
-            Núcleo con forma de disco o toroide. Ventajas incluyen mejor rendimiento, bajo ruido, menor calentamiento por corrientes de Foucault, y tamaño reducido. Su construcción es más compleja y costosa.
-        </p>
-
-        <h3>Autotransformador</h3>
-        <p>
-            Formado por un solo devanado con bornes para el primario y secundario, ambos compartiendo una toma común.
-        </p>
-        <p>
-            <strong>Relación de transformación: m = N1 / N2 = V1 / V2 = I2 / I1</strong>
-        </p>
-        <p>
-            Permite utilizar un conductor de menor diámetro, reducir el número de espiras y usar un núcleo de menor sección, disminuyendo tamaño y calentamiento. Puede regular la tensión mediante un sistema de conexión móvil basado en una escobilla, conocido como Variac en su versión regulable.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>3. Materiales constructivos de los transformadores</h2>
-        <p>
-            Los materiales a tener en cuenta para construir un transformador son:
-        </p>
-        <ul>
-            <li><strong>Circuito eléctrico:</strong> Hilo esmaltado, carretes para alojar devanados, y aislantes de diferentes tipos (laminados, tubos flexibles, etc.).</li>
-            <li><strong>Circuito magnético:</strong> Chapa magnética para el núcleo, crucial para reducir pérdidas en el hierro.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>3.1. Hilo de cobre esmaltado</h2>
-        <p>
-            Utilizado en los devanados de transformadores de baja potencia. En transformadores de gran potencia se pueden usar pletinas de cobre o aluminio. Las pérdidas en el cobre (PCu) se calculan utilizando el factor empírico KCu.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>3.2. Chapa magnética</h2>
-        <p>
-            Constituye el núcleo del transformador. Para reducir pérdidas en el hierro (PFe), se utilizan chapas magnéticas finas (0.3-0.5 mm) aisladas químicamente. Las chapas pueden ser de grano no orientado o grano orientado. Las pérdidas son proporcionadas por el fabricante en W/kg.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>3.3. Carretes aislantes</h2>
-        <p>
-            Hechos de material aislante rígido. El área de la ventana del carrete es crucial para determinar la potencia del transformador. Las dimensiones deben permitir el montaje fácil del núcleo y alojar los devanados.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>3.4. Otros aislantes</h2>
-        <p>
-            Incluyen aislantes laminados flexibles para separar conductores y tubos flexibles para aislar terminales.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>4. Características eléctricas de un transformador</h2>
-        <p>
-            El documento describe varias características importantes que se deben considerar para el cálculo de transformadores:
-            <ul>
-                <li><strong>Tensión del primario (V₁)</strong>: Voltaje en el devanado primario.</li>
-                <li><strong>Tensión del secundario (V₂)</strong>: Voltaje en el devanado secundario.</li>
-                <li><strong>Caída de tensión</strong>: Diferencia de voltaje en el devanado secundario bajo carga máxima.</li>
-                <li><strong>Corriente del primario (I₁)</strong>: Corriente en el devanado primario.</li>
-                <li><strong>Corriente del secundario (I₂)</strong>: Corriente en el devanado secundario.</li>
-                <li><strong>Frecuencia (F)</strong>: Frecuencia de la red de alimentación (en Hz).</li>
-                <li><strong>Potencia aparente (S)</strong>: Potencia en VA (voltioamperios), calculada como \( S = V_2 \cdot I_2 \).</li>
-            </ul>
-            También menciona la <strong>densidad de corriente (J)</strong>, que es la corriente por unidad de superficie en A/mm², determinada empíricamente. 
-            Además, se recuerdan tres tipos de potencias en corriente alterna:
-            <ul>
-                <li><strong>Potencia aparente (S)</strong>: \( S = V \cdot I \) (VA).</li>
-                <li><strong>Potencia activa (P)</strong>: \( P = V \cdot I \cdot \cos \phi \) (W).</li>
-                <li><strong>Potencia reactiva (Q)</strong>: \( Q = V \cdot I \cdot \sin \phi \) (VAr).</li>
-            </ul>
-            Finalmente, en el "caso práctico inicial" se menciona que algunos datos para el cálculo de transformadores se toman de forma empírica, basados en la densidad de corriente o el rendimiento.
-        </p>
-        <p><strong>Rendimiento</strong></p>
-        <p>
-            El texto explica el rendimiento de un transformador, que es una máquina con alto rendimiento (superior al 90%). Sin embargo, se producen pérdidas en el hierro (<em>P<sub>Fe</sub></em>) y en el cobre (<em>P<sub>Cu</sub></em>), lo que hace que la potencia del transformador conectado a plena carga no corresponda con la calculada previamente. En transformadores de pequeña potencia, el dato del rendimiento puede obviarse, pero no en transformadores de mayor potencia. El rendimiento se expresa en porcentaje y se calcula como el cociente entre la potencia activa del devanado secundario (<em>P<sub>2</sub></em>) y la potencia activa del primario (<em>P<sub>1</sub></em>), multiplicado por 100. La fórmula aproximada del rendimiento es:
-        </p>
-        <p>
-            <em>η = (P<sub>2</sub> / P<sub>1</sub>) &times; 100 = (P<sub>2</sub> / (P<sub>2</sub> + P<sub>Fe</sub> + P<sub>Cu</sub>)) &times; 100</em>
-        </p>
-        <p>
-            Para agilizar el cálculo sin conocer las pérdidas en el hierro y en el cobre, se utilizan valores de rendimiento de una tabla, establecidos en función de la potencia aparente del transformador.
-        </p>
-    </div>
-    
-    
+        // Mostrar la primera sección por defecto
+        showSection('services');
+    </script>
 </body>
 </html>
